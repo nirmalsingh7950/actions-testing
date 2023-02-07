@@ -1,0 +1,12 @@
+name: selfmade github action
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check-git:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check git present 
+        run: git --version
