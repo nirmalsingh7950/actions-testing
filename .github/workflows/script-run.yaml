@@ -13,3 +13,5 @@ jobs:
         run: pwd
       - name: run ls command
         run: ls
+      - name: Running script
+        run: bash shell-script.sh
