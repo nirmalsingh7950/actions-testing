@@ -9,6 +9,7 @@ jobs:
   run-shell-script:
     runs-on: ubuntu-latest
     steps:
-      - name: running shell script
+      - name: print present working directory
         run: pwd
+      - name: run ls command
         run: ls
