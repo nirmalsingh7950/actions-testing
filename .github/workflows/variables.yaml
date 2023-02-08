@@ -1,10 +1,17 @@
 name: Use variables
 run-name: Use of variables in github actions
+env:
+  workflow-num: 4
 on:
   push:
     branches: [ main ]
 
 jobs:
+  workflow-env-var:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pring workflow level env variables ${{ env.workflow-num }} 
+        run: echo "This is workflow number $workflow-num"
   step-env-var:
     runs-on: ubuntu-latest
     steps:
