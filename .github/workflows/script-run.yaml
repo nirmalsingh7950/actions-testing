@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: running shell script
         run: |
-          echo "pwd is $pwd"
           ls
+          pwd
