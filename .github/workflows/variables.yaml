@@ -16,10 +16,10 @@ jobs:
   job-env-var:
     runs-on: ubuntu-latest
     env:
-      JOB_NUM: 2
+      jobnum: 2
       DEPT: Sales
       ORG: CloudEQ
     steps:
-      - name: Create and Print job level env vars ${{ env.JOB_NUM }}.
+      - name: Create and Print job level env vars ${{ env.jobnum }}.
         run: echo "This is $DEPT from $ORG Organization"
 
