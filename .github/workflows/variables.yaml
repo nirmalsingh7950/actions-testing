@@ -12,4 +12,4 @@ jobs:
         env:
           DEPT: marketing
           ORG: CloudEQ
-        run: echo "This is $DEPT from $CloudEQ Organization"
+        run: echo "This is $DEPT from $ORG Organization"
