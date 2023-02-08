@@ -1,0 +1,14 @@
+name: Use variables
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  env-var-job:
+    steps:
+      - name: Create and print env vars 
+        env:
+          DEPT: marketing
+          ORG: CloudEQ
+        run: echo "This is $DEPT from $CloudEQ Organization"
