@@ -13,6 +13,7 @@ jobs:
         run: pwd
       - name: run ls command
         run: ls
+      - uses: actions/checkout@v2
       - name: Running script
         run: bash shell-script.sh
         shell: bash
