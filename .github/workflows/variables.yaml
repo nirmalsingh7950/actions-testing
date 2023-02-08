@@ -7,11 +7,13 @@ on:
     branches: [ main ]
 
 jobs:
+# job to print workflow level variables
   workflow-env-var:
     runs-on: ubuntu-latest
     steps:
       - name: Pring workflow level env variables ${{ env.workflow-num }} 
         run: echo "This is workflow number $workflow-num"
+# job to print step level variables
   step-env-var:
     runs-on: ubuntu-latest
     steps:
@@ -20,6 +22,7 @@ jobs:
           DEPT: marketing
           ORG: CloudEQ
         run: echo "This is $DEPT from $ORG Organization"
+# job to print job level variables
   job-env-var:
     runs-on: ubuntu-latest
     env:

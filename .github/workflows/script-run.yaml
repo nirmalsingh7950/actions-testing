@@ -1,0 +1,15 @@
+name: Running shell script
+run-name: Running shell script 
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-shell-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running shell script
+        run: |
+        echo "pwd is $pwd"
+        ls
