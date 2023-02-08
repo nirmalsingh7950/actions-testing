@@ -1,15 +1,24 @@
 name: Use variables
-
+run-name: Use of variables in github actions
 on:
   push:
     branches: [ main ]
 
 jobs:
-  env-var-job:
+  step-env-var:
     runs-on: ubuntu-latest
     steps:
-      - name: Create and print env vars 
+      - name: Create and print step level env vars 
         env:
           DEPT: marketing
           ORG: CloudEQ
         run: echo "This is $DEPT from $ORG Organization"
+  job-env-var:
+    runs-on: ubuntu-latest
+    env:
+      DEPT: Sales
+      ORG: CloudEQ
+    steps:
+      - name: Create and Print job level env vars.
+        run: echo "This is $DEPT from $ORG Organization"
+
