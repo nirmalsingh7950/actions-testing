@@ -9,8 +9,11 @@ jobs:
   run-shell-script:
     runs-on: ubuntu-latest
     steps:
-      - name: running shell script
-        run: |
-          pwd
-          echo "pwd is $pwd"
-          ls
+      - name: print present working directory
+        run: pwd
+      - name: run ls command
+        run: ls
+      - uses: actions/checkout@v2
+      - name: Running script
+        run: bash shell-script.sh
+        shell: bash
