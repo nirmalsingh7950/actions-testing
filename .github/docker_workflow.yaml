@@ -1,8 +1,9 @@
-name: ci
+name: workflow to build and push docker image to docker hub
+run-name: Docker build push to hub workflow
 
 on:
   push:
-    branches: main
+    branches: [ main ]
 
 jobs:
   login:
