@@ -20,4 +20,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/statichtml:v1
+          tags: nirmalcontainer/static-html:latest
